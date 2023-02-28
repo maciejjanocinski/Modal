@@ -1,0 +1,28 @@
+$light-gray: #DADFE9;
+$dark-gray: #75777B;
+$off-white: #F0F1F8;
+$rounding: 12px;
+$mobile: 376px;
+$tablet: 835px;
+
+
+:root {
+  --max-width: 372px;
+  --margin-big: 24px;
+  --margin-medium: 16px;
+  --margin-small: 10px;
+  --height: auto; //322px;
+  --margin-right-header: 70px;
+  --margin-top-rating: 24px;
+  --el-width: 87.1%;
+}
+
+@media only screen and (max-width: $mobile) {
+  :root {
+    --max-width: 343px;
+    --height: auto; //314px;
+    --margin-big: 16px;
+    --margin-right-header: 90px;
+    --el-width: 90.67%;
+  }
+}

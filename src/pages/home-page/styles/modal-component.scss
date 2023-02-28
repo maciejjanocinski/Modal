@@ -1,0 +1,206 @@
+@import '../../../global-styles/styles/root.scss';
+
+.modal-open {
+  padding-right: 0 !important;
+}
+
+@mixin modal-component {
+  .modal-cmp {
+    position: relative;
+    width: 100%;
+    max-width: var(--max-width);
+    height: var(--height);
+    background-color: white;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    border-radius: 18px;
+    padding-right: 0 !important;
+
+    & &__button-x {
+      width: 32px;
+      height: 32px;
+      background-color: transparent;
+      border: 1px solid transparent;
+      font-size: 40px;
+      font-weight: 300;
+      color: #0D1016;
+      position: absolute;
+      right: 10px;
+      top: 4.6px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    & &__star {
+      margin-left: var(--margin-big);
+      margin-top: var(--margin-big);
+      background-color: $off-white;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50px;
+
+      img {
+        width: 16px;
+      }
+    }
+
+    & &__header {
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-left: var(--margin-big);
+      margin-right: var(--margin-right-header);
+      font-size: 18px;
+      font-weight: 600;
+      margin-top: 10px;
+    }
+
+    & &__rating {
+      margin-top: var(--margin-top-rating);
+      height: 48px;
+      width: var(--el-width);
+      margin-left: var(--margin-big);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+    }
+
+    & &__rateBox {
+      border: 1px solid $light-gray;
+      height: 48px;
+      width: 18.5%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 12px;
+      background-color: #FCFCFF;
+      font-size: 18px;
+      line-height: 18px;
+      font-weight: 500;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        background-color: #EEEFFF;
+        cursor: pointer;
+        border: 1px solid $light-gray;
+      }
+
+      &--selected {
+        background-color: #293CE2 !important;
+        color: white;
+      }
+    }
+
+    & &__satisfaction {
+
+      margin-top: 12px;
+      height: 29px;
+      margin-left: var(--margin-big);
+      margin-right: var(--margin-big);
+      width: var(--el-width);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+
+      &-text {
+        font-size: 12px;
+        color: #AEB5C3;
+        width: 90px;
+        //  border: 1px solid red;
+        letter-spacing: -0.03em;
+        font-weight: 500;
+      }
+
+      &-text:nth-child(2) {
+        text-align: end;
+
+      }
+
+    }
+
+    & &__button-nextStep {
+      width: var(--el-width);
+      height: 48px;
+      border-radius: 12px;
+      border: 0 solid transparent;
+      transition: all 0.3s ease-in-out;
+      position: absolute;
+      bottom: var(--margin-top-rating);
+      left: var(--margin-big);
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      background-color: #293CE2;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+
+      &:hover {
+        background-color: #4759F4;
+      }
+
+      &:disabled {
+        color: white;
+        background-color: $off-white !important;
+        box-shadow: none !important;
+        cursor: default;
+      }
+
+      &:active {
+        background-color: #2032D0;
+        box-shadow: inset 0px 0px 5px #c1c1c1;
+        transition: 0.1s ease-in-out;
+      }
+    }
+
+    & &__bottom-h {
+      height: 96px;
+    }
+
+  }
+
+
+
+
+
+
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+}
+
+
+
+
+
+.animate-close {
+  animation: fadeOut 0.5s ease !important;
+
+}
+
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+
+  }
+
+  to {
+    opacity: 0;
+
+  }
+}

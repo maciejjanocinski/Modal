@@ -1,0 +1,16 @@
+/// Homepage Styles File
+/// Here we import all the Styles files we need for our Homepage.
+@import "modal-component";
+
+
+#main-page {
+
+  width: 1440px;
+  margin: 0; //16px;
+  height: auto; //322px;
+  display: flex;
+  justify-content: center;
+
+}
+
+@include modal-component
