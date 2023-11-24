@@ -17,7 +17,7 @@ setTimeout(() => {
 
     nextStepBtn.disabled = true;
     myModal.show();
-}, 3000)
+}, 1500)
 
 
 
